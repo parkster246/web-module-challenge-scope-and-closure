@@ -113,27 +113,20 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(inning, numberOfInnings) {
-  homeScore = 0;
-  awayScore = 0;
+function scoreboard(inning, index) {
+  let homeScore = 0
+  let awayScore = 0
+  let answer = []
+  for (let i = 0; i < index; i++) {
+    homeScore += inning()
+    awayScore += inning()
+    answer.push(`${i + 1} Inning: ${homeScore} - ${awayScore}`)
+    // answer.push(`${homeScore} - ${awayScore}`)
+  }
+console.log(inning[8])
 
-  for(let i = 0; i < numberOfInnings ; i++){
-    homeScore += (inning() + 1)
-    awayScore += (inning() + 1)
-  }
-  return {
-    '1st Inning': homeScore - awayScore,
-    '2nd Inning': [],
-    '3rd Inning': [],
-    '4th Inning': [],
-    '5th Inning': [],
-    '6th Inning': [],
-    '7th Inning': [],
-    '8th Inning': [],
-    '9th Inning': [],
-    'Final Score': []
-    
-  }
+
+  return answer
 }
-console.log(scoreboard()) 
+console.log(scoreboard(inning, 9)) 
 

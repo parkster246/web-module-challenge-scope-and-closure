@@ -42,6 +42,7 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+Closure is when you have an inner function inside of an outer function
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +64,9 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
-b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+on line 50, you can tell because there is an inner function to the outer function personalDice
+b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change? the name should always remain the same but the number will always change
+c. What is the lexical scope of `newRoll`? Global
 
 ### Task 2c - Exit Ticket
 
